@@ -1,0 +1,26 @@
+Nodejs (Chocolatey will be included)	-	Download	-	https://nodejs.org/en/download/
+Visual Studio Code						-	Download	-	https://code.visualstudio.com/docs/?dv=win
+Git										-	Download	-	https://git-scm.com/download/win
+------------
+node --version
+npm install -g @angular/cli
+ng --version
+---------
+ng new ProjectManagement
+	promts for routing and css
+ng add @angular/material
+	Hammerjs
+	browser animation
+
+ng g c addTask -> add-task
+ng test
+npm install
+ng serve
+npm start
+
+---------
+git config --global user.email "kiranmohanm@gmail.com"
+git config --global user.name "Kiran Mangu"
+
+git clone https://github.com/KiranMangu/TaskManager.git
+git remote add myrepo https://github.com/KiranMangu/TaskManager.git
