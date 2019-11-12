@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-task',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor() { }
+  taskGroup: FormGroup;
+  constructor(private _fb: FormBuilder) { }
 
   ngOnInit() {
+    this.taskGroup = this._fb.group({
+      task: ['', Validators.required],
+      parentTask: ['', Validators.required],
+      startDate: ['', Validators.required],
+      endDate: ['', Validators.required]
+    }, { validator: this.checkDate });
   }
 
+  checkDate(group: FormGroup): any {
+    if (group.controls.startDate.value === null && group.controls.endDate.value === null && group.controls.endDate.value > group.controls.startDate) {
+      return { notValid: true };
+    }
+    return null;
+  }
 }

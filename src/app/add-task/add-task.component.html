@@ -1,1 +1,50 @@
 <p>add-task works!</p>
+<div>
+    <form>
+        <table width='100%'>
+            <tr>
+                <td>
+                    Task:
+                </td>
+                <td class='full-width-container'>
+                    <mat-form-field>
+                        <input matInput placeholder='Task' formControlName='task'>
+                        <mat-error>Task name is required</mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Priority:
+                </td>
+                <td class='full-width-container'>
+                    <mat-slider [max]="max" [min]="min" [thumbLabel]="thumbLabel" formControlName='priority'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Parent Task:
+                </td>
+                <td class='full-width-container'>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Start Date:
+                </td>
+                <td class='full-width-container'>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    End Date:
+                </td>
+                <td class='full-width-container'>
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
