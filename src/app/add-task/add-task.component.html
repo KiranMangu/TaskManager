@@ -1,14 +1,18 @@
-<p>add-task works!</p>
-<div>
-    <form>
-        <table width='100%'>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Add Task</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table>
             <tr>
                 <td>
                     Task:
                 </td>
-                <td class='full-width-container'>
+                <td class="full-width-container">
                     <mat-form-field>
-                        <input matInput placeholder='Task' formControlName='task'>
+                        <input matInput #input placeholder='Enter Task Name'>
+                        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                        <!-- <mat-hint>Enter unique name</mat-hint> -->
                         <mat-error>Task name is required</mat-error>
                     </mat-form-field>
                 </td>
@@ -17,15 +21,15 @@
                 <td>
                     Priority:
                 </td>
-                <td class='full-width-container'>
-                    <mat-slider [max]="max" [min]="min" [thumbLabel]="thumbLabel" formControlName='priority'>
+                <td>
+                    <mat-slider [min]=min [max]=max thumbLabel tickInterval='1' step='1'></mat-slider>
                 </td>
             </tr>
             <tr>
                 <td>
                     Parent Task:
                 </td>
-                <td class='full-width-container'>
+                <td>
 
                 </td>
             </tr>
@@ -33,18 +37,35 @@
                 <td>
                     Start Date:
                 </td>
-                <td class='full-width-container'>
-
+                <td>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]='startDate' placeholder='Start Date'>
+                        <mat-datepicker-toggle matSuffix [for]='startDate'></mat-datepicker-toggle>
+                        <mat-datepicker #startDate></mat-datepicker>
+                    </mat-form-field>
                 </td>
             </tr>
             <tr>
                 <td>
                     End Date:
                 </td>
-                <td class='full-width-container'>
+                <td>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]='endDate' placeholder='End Date'>
+                        <mat-datepicker-toggle matSuffix [for]='endDate'></mat-datepicker-toggle>
+                        <mat-datepicker #endDate></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
 
+                </td>
+                <td>
+                    <button mat-raised-button color='primary'>Submit</button> <span style='padding:10px'></span>
+                    <button mat-raised-button color='primary'>Reset</button>
                 </td>
             </tr>
         </table>
-    </form>
-</div>
+    </mat-card-content>
+</mat-card>

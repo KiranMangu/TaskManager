@@ -8,6 +8,8 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
+  min: Number = 1;
+  max: Number = 100;
 
   taskGroup: FormGroup;
   constructor(private _fb: FormBuilder) { }

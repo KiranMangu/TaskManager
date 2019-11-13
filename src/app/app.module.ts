@@ -5,20 +5,39 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+
 import { AddTaskComponent } from './add-task/add-task.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    ViewTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule,
+    MatCardModule,
+    MatFormFieldModule, MatInputModule, MatButtonModule,
+    MatSliderModule, MatDatepickerModule, MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

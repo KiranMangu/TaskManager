@@ -1,0 +1,10 @@
+mat-slider {
+    width: 200px;
+  }
+mat-card{
+    background-color: darkslategray;
+    color: aliceblue;
+}
+mat-form-field, mat-hint{
+    color: aliceblue;
+}
