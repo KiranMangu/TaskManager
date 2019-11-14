@@ -1,19 +1,28 @@
 Nodejs (Chocolatey will be included)	-	Download	-	https://nodejs.org/en/download/
 Visual Studio Code						-	Download	-	https://code.visualstudio.com/docs/?dv=win
 Git										-	Download	-	https://git-scm.com/download/win
+Visual Studio 2019						-	Download	-	
+EntityFrameworkCore
+			Microsoft.EntityFrameworkCore
+			Microsoft.EntityFrameworkCore.SqlServer
+			Microsoft.EntityFrameworkCore.SqlServer.Design
+			Microsoft.EntityFrameworkCore.Tools.DotNet  - tools for EF commands for migrations, scaffolding etc
 ------------
 node --version
 npm install -g @angular/cli
 ng --version
----------
-ng new ProjectManagement
-	promts for routing and css
 ng add @angular/material
 	Hammerjs
 	browser animation
-npm install --save @ng-bootstrap/ng-bootstrap
+npm i -S bootstrap	
+			/*npm install --save @ng-bootstrap/ng-bootstrap
+			app.module.ts -> import {NgbModule} from '@ng-bootstrap/ng-bootstrap';*/
+---------
+ng new ProjectManagement
+	promts for routing and css
 
 ng g c addTask -> add-task
+ng g class task.model
 ng test
 npm install
 ng serve
@@ -31,3 +40,16 @@ Start with HTML
 -----
 git clone  git_URL
 C:\> npm install
+---------
+SQl server
+Windows Authentication
+
+EF Core
+SQL Server	Microsoft.EntityFrameworkCore.SqlServer
+MySQL	MySql.Data.EntityFrameworkCore
+PostgreSQL	Npgsql.EntityFrameworkCore.PostgreSQL
+SQLite	Microsoft.EntityFrameworkCore.SQLite
+SQL Compact	EntityFrameworkCore.SqlServerCompact40
+In-memory	Microsoft.EntityFrameworkCore.InMemory
+https://docs.microsoft.com/en-us/ef/core/get-started/index?tabs=netcore-cli
+https://www.learnentityframeworkcore.com/
